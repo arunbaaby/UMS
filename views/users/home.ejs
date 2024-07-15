@@ -1,0 +1,21 @@
+<% include('../layouts/header.ejs') %>
+
+<h1>Welcome <%= user.name %></h1>
+<table width="50%">
+    <tr>
+        <td><img src="userImages/<%= user.image %>" alt="<%= user.image %>" width="100px" height="100px"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><%= user.email %></td>
+    </tr>
+    <tr>
+        <td>Mobile no.</td>
+        <td><%= user.mobile %></td>
+    </tr>
+</table>
+<!--we want to send the id back of the user to be edited-->
+<a href="/edit?id=<%= user._id %>">Edit</a><br>
+<a href="/logout">Logout</a>
+
+<% include('../layouts/footer.ejs') %>
